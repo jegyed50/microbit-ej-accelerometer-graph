@@ -1,10 +1,10 @@
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index <= 255; index++) {
         led.plotBarGraph(
-        0,
+        index,
         255
         )
-        serial.writeValue(index, input.acceleration(Dimension.X))
+        serial.writeValue("index", index)
         basic.pause(50)
     }
 })
